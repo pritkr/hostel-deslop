@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gec-hostel",
+  "compatibility_date": "2025-09-02",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@tanstack/react-start/server-entry",
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "gec-hostel-db",
+      "database_id": "local-gec-hostel-db",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "PHOTOS",
+      "bucket_name": "gec-hostel-photos"
+    }
+  ],
+  "vars": {
+    "APP_NAME": "GEC Sheikhpura Hostel",
+    "APP_ID_PREFIX": "GEC-H"
+  }
+}

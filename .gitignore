@@ -1,0 +1,23 @@
+.data/
+.drizzle/
+dist/
+.output/
+node_modules/
+# Local Worker state. This must be the dotted form: plain `wrangler/` does not
+# match `.wrangler/`, and that directory holds a live D1 database with session
+# tokens and password hashes alongside the local R2 photo blobs.
+.wrangler/
+wrangler/
+.dev.vars
+.env
+.env.local
+*.db
+*.db-journal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+/data/
+routeTree.gen.ts
+
+# also ignore a local node_modules symlink (trailing-slash pattern only matches dirs)
+node_modules
